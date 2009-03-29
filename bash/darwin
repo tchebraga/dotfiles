@@ -1,0 +1,5 @@
+# darwin specific config
+alias e='mate'
+alias ls='ls -hGF'
+
+export EDITOR='mate -w'

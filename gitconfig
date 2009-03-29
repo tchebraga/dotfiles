@@ -1,14 +1,19 @@
 [user]
-	name = Ryan Bates
-	email = ryan@railscasts.com
-[alias]
-	co = checkout
+	name = Edson César
+	email = edsono@gmail.com
 [color]
-	diff = auto
 	status = auto
+	diff = auto
 	branch = auto
 [core]
-	excludesfile = /Users/rbates/.gitignore
+	excludesfile = /Users/edson/.gitignore
 	editor = mate -w
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+[branch]
+	autosetupmerge = true
 [apply]
 	whitespace = nowarn
