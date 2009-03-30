@@ -17,3 +17,5 @@
 	autosetupmerge = true
 [apply]
 	whitespace = nowarn
+[gc]
+  auto = 1
