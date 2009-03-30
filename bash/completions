@@ -3,6 +3,6 @@ if [ -f /opt/local/etc/bash_completion ]; then
   . /opt/local/etc/bash_completion
 fi
 
+source ~/.bash/completion_scripts/mategem_completion
 complete -C ~/.bash/completion_scripts/rake_completion -o default rake
 complete -C ~/.bash/completion_scripts/project_completion -o default c
-complete -C ~/.bash/completion_scripts/mategem_completion -F _mategem -o dirnames mategem
