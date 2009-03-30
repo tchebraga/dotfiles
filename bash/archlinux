@@ -1,0 +1,8 @@
+# sudo pacman -S by typing pac
+alias pac="sudo pacman -S"
+
+# Lets you search through all available packages simply using 'pacsearch packagename'
+alias pacs="pacman -Sl | cut -d' ' -f2 | grep "
+
+# sudo pacman -Syu by typing pacup (sudo must be installed and configured first)
+alias pacup="sudo pacman -Syu"

@@ -1,3 +1,7 @@
+# colored grep
+export GREP_COLOR="1;33"
+alias g='grep --color=auto'
+
 # Show Git Branch on prompt
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -5,7 +9,6 @@ parse_git_branch() {
 
 # However, I had the same line-wrapping problem you did. The fix was to insert \[ and \] around
 # the ANSI escapes so that the shell knows not to include them in the line wrapping calculation.
-
 if [[ -n $SSH_CONNECTION ]]; then
   export PS1="!\[\e[01;32m\]\u\[\e[0m\]@\[\e[01;32m\]\h\[\e[0m\]:\[\e[36m\]\w\[\e[01;32m\]\$(parse_git_branch)\[\e[0;36m\] $ \[\e[0m\]"
 else
