@@ -3,6 +3,6 @@ if [ -f /etc/bash_completion ]; then
   . /etc/bash_completion
 fi
 
-alias ls='ls -hGF'
+alias ls='ls -hF --color=auto'
 
 export EDITOR='vim'
