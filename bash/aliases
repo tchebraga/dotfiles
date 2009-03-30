@@ -33,7 +33,7 @@ alias rst='touch tmp/restart.txt'
 alias %=' '
 
 # changing directory to code project
-function d { cd ~/Development/$1; }
+function c { cd ~/code/$1; }
 
 # misc
 alias h='history'
