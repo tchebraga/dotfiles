@@ -1,8 +1,3 @@
-# MacPorts bash-completion
-if [ -f /opt/local/etc/bash_completion ]; then
-  . /opt/local/etc/bash_completion
-fi
-
 # darwin specific config
 alias e='mate'
 alias ls='ls -hGF'
@@ -22,3 +17,9 @@ _mategem()
 }
 
 complete -F _mategem -o dirnames mategem
+
+# MacPorts bash-completion
+if [ -f /opt/local/etc/bash_completion ]; then
+  . /opt/local/etc/bash_completion
+fi
+

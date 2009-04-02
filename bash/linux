@@ -1,8 +1,12 @@
 # linux specific config
+alias ls='ls -hF --color=auto'
+
+export EDITOR='vim'
+
 if [ -f /etc/bash_completion ]; then
   . /etc/bash_completion
 fi
 
-alias ls='ls -hF --color=auto'
+# Arch Linux
+[[ -f /etc/arch-release ]] && source ~/.bash/archlinux
 
-export EDITOR='vim'
