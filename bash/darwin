@@ -4,6 +4,8 @@ alias ls='ls -hGF'
 alias gd='git diff | e'
 
 export EDITOR='mate -w'
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # mategem
 _mategem()
