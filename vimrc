@@ -26,7 +26,7 @@ set nocompatible
 set backspace=indent,eol,start
 
 " highlight the searchterms
-set hlsearch
+set nohlsearch
 
 " jump to the matches while typing
 set incsearch
@@ -67,6 +67,13 @@ syntax on
 " Always show the menu, insert longest match
 set completeopt=menuone,longest
 
+" Autoselect the right compiler using the filetype
+autocmd BufRead *
+  \ try | execute "compiler ".&filetype | catch /./ | endtry
+
+" Ruby test unit
+autocmd BufNewFile,BufRead test_*.rb  compiler rubyunit
+
 " When editing a file, always jump to the last known cursor position.
 " Don't do it when the position is invalid or when inside an event handler
 " (happens when dropping a file on gvim).
@@ -91,17 +98,19 @@ if has("gui_macvim")
   "tell the term has 256 colors
   set t_Co=256
   " Other preferences
-  set lines=43
-  set columns=132
+  set lines=50
+  set columns=180
   set guitablabel=%M%t
 endif
 
 " Load ~/.vimrc - Reload with :so %
 nmap <silent> ,v :e ~/.vimrc<Enter>
 
-" Remove Hilight
-nmap <silent> ,h :nohl<Enter>
-
 " FuzzyFinderOpenFile
 nmap ,f :FuzzyFinderFile<Enter>
 
+"Highlightedsearch
+map ,sh :set hls!<cr>:echo "Highlightedsearch="&hls<cr>
+
+" Changing menu Make to Cmd-R
+nnoremap <D-r> :make %<Enter>
