@@ -17,12 +17,7 @@ set autoindent
 set wildchar=<Tab>
 
 " show line numbers
-"set number
-
-" Fold using markers {{{
-" like this
-" }}}
-set foldmethod=marker
+set number
 
 " enable all features
 set nocompatible
@@ -60,28 +55,14 @@ set showmatch
 " write before hiding a buffer
 set autowrite
 
-" allows hidden buffers to stay unsaved, but we do not want this, so comment
-" it out:
-"set hidden
-
-"set wmh=0
+" Files .sh are always bash
+au FileType sh let b:is_bash=1
 
 " auto-detect the filetype
 filetype plugin indent on
 
 " syntax highlight
 syntax on
-
-" we use a dark background, don't we?
-set guioptions-=T
-if has("gui_running")
-  "tell the term has 256 colors
-  set t_Co=256
-  colorscheme railscasts
-  set lines=55
-  set columns=210
-else
-
 
 " Always show the menu, insert longest match
 set completeopt=menuone,longest
@@ -94,10 +75,30 @@ autocmd BufReadPost *
   \   exe "normal g`\"" |
   \ endif
 
-" Our prefered font on mac :P
-"set guifont=Monaco:h12
-
-" Other preferences
-set guitablabel=%M%t
+" Dont save backups
 set nobackup
 set nowritebackup
+
+set cursorline
+set backspace=indent,eol,start
+
+" we use a dark background, don't we?
+set guioptions-=T
+if has("gui_macvim")
+  colorscheme railscasts
+  " Our prefered font on mac :P
+  set guifont=Monaco:h11
+  "tell the term has 256 colors
+  set t_Co=256
+  " Other preferences
+  set lines=43
+  set columns=132
+  set guitablabel=%M%t
+endif
+
+" Load ~/.vimrc - Reload with :so %
+nmap <silent> ,v :e ~/.vimrc<Enter>
+
+" Remove Hilight
+nmap <silent> ,h :nohl<Enter>
+
