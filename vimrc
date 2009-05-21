@@ -102,3 +102,6 @@ nmap <silent> ,v :e ~/.vimrc<Enter>
 " Remove Hilight
 nmap <silent> ,h :nohl<Enter>
 
+" FuzzyFinderOpenFile
+nmap ,f :FuzzyFinderFile<Enter>
+
