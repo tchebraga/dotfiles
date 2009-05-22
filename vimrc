@@ -89,7 +89,6 @@ set nowritebackup
 set cursorline
 set backspace=indent,eol,start
 
-" we use a dark background, don't we?
 set guioptions-=T
 if has("gui_macvim")
   colorscheme railscasts
@@ -100,6 +99,18 @@ if has("gui_macvim")
   " Other preferences
   set lines=50
   set columns=180
+  set guitablabel=%M%t
+endif
+
+if has("gui_running")
+  colorscheme railscasts
+  " Our prefered font on linux :P
+  set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
+  "tell the term has 256 colors
+  set t_Co=256
+  " Other preferences
+  set lines=50
+  set columns=130
   set guitablabel=%M%t
 endif
 
