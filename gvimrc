@@ -99,23 +99,25 @@ if has("gui_macvim")
   " Other preferences
   set lines=50
   set columns=180
+ " Changing menu Make to Cmd-R
+  nnoremap <D-r> :make %<Enter>
   set guitablabel=%M%t
-endif
-
-if has("gui_running")
-  colorscheme railscasts
-  " Our prefered font on linux :P
-  set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
-  "tell the term has 256 colors
-  set t_Co=256
-  " Other preferences
-  set lines=50
-  set columns=130
-  set guitablabel=%M%t
+else
+  if has("gui_running")
+    colorscheme railscasts
+    " Our prefered font on linux :P
+    set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
+    "tell the term has 256 colors
+    set t_Co=256
+    " Other preferences
+    set lines=50
+    set columns=130
+    set guitablabel=%M%t
+  endif
 endif
 
 " Load ~/.vimrc - Reload with :so %
-nmap <silent> ,v :e ~/.vimrc<Enter>
+nmap <silent> ,v :e ~/.gvimrc<Enter>
 
 " FuzzyFinderOpenFile
 nmap ,f :FuzzyFinderFile<Enter>
@@ -123,5 +125,4 @@ nmap ,f :FuzzyFinderFile<Enter>
 "Highlightedsearch
 map ,sh :set hls!<cr>:echo "Highlightedsearch="&hls<cr>
 
-" Changing menu Make to Cmd-R
-nnoremap <D-r> :make %<Enter>
+
