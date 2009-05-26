@@ -37,6 +37,6 @@ function c { cd ~/code/$1; }
 
 # misc
 alias h='history'
-alias g='grep'
 alias f='find'
+alias gr='grep'
 alias reload='source ~/.profile'

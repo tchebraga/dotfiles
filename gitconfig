@@ -19,3 +19,5 @@
 	whitespace = nowarn
 [gc]
   auto = 1
+[push]
+	default = matching
