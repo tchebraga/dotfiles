@@ -35,5 +35,5 @@ alias %=' '
 # misc
 alias h='history'
 alias f='find'
-alias gr='grep'
+alias gr='grep --color=auto'
 alias reload='source ~/.profile'

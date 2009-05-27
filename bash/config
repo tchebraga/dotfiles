@@ -1,6 +1,5 @@
 # colored grep
 export GREP_COLOR="1;33"
-alias g='grep --color=auto'
 
 # Show Git Branch on prompt
 parse_git_branch() {
