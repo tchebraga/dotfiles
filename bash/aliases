@@ -32,9 +32,6 @@ alias rst='touch tmp/restart.txt'
 # commands starting with % for pasting from web
 alias %=' '
 
-# changing directory to code project
-function c { cd ~/code/$1; }
-
 # misc
 alias h='history'
 alias f='find'

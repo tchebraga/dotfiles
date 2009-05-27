@@ -2,25 +2,10 @@
 alias e='mate'
 alias ls='ls -hGF'
 alias gd='git diff | e'
-alias mysqlstart='sudo /opt/local/bin/mysqld_safe5 &'
-alias mysqlstop='/opt/local/bin/mysqladmin5 -u root -p shutdown'
 
 export EDITOR='mate -w'
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-
-# mategem
-_mategem()
-{
-    local curw
-    COMPREPLY=()
-    curw=${COMP_WORDS[COMP_CWORD]}
-    local gems="$(gem environment gemdir)/gems"
-    COMPREPLY=($(compgen -W '$(ls $gems)' -- $curw));
-    return 0
-}
-
-complete -F _mategem -o dirnames mategem
 
 # MacPorts bash-completion
 if [ -f /opt/local/etc/bash_completion ]; then
