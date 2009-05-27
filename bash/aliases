@@ -8,6 +8,7 @@ alias ll="ls -l"
 alias la='ls -A'
 
 # git
+alias g='git'
 alias ga='git add'
 alias gl='git pull'
 alias gp='git push'
@@ -17,7 +18,6 @@ alias gca='git commit -v -a'
 alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status'
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 
 # rails
 alias sc='script/console'
@@ -37,6 +37,6 @@ function c { cd ~/code/$1; }
 
 # misc
 alias h='history'
-alias g='grep'
 alias f='find'
+alias gr='grep'
 alias reload='source ~/.profile'
