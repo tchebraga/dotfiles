@@ -1,7 +1,7 @@
 # darwin specific config
 alias e='mate'
 alias ls='ls -hGF'
-alias gd='git diff | e'
+alias gde='git diff | e'
 
 export EDITOR='mate -w'
 export LANG=en_US.UTF-8
