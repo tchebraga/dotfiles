@@ -33,6 +33,7 @@ alias rst='touch tmp/restart.txt'
 alias %=' '
 
 # misc
+alias s='sudo'
 alias h='history'
 alias f='find'
 alias gr='grep --color=auto'
