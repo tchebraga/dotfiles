@@ -1,5 +1,6 @@
 # colored grep
 export GREP_COLOR="1;33"
+alias g='grep --color=auto'
 
 # Show Git Branch on prompt
 parse_git_branch() {
@@ -11,5 +12,5 @@ parse_git_branch() {
 if [[ -n $SSH_CONNECTION ]]; then
   export PS1="\[\e[01;32m\]\u\[\e[00;37m\]@\[\e[01;33m\]\h\[\e[0m\]:\[\e[36m\]\w\[\e[01;32m\]\$(parse_git_branch)\[\e[0;36m\] $ \[\e[0m\]"
 else
-  export PS1="\[\e[01;32m\]\u\[\e[01;37m\]@\[\e[01;32m\]\h\[\e[0m\]:\[\e[36m\]\w\[\e[01;32m\]\$(parse_git_branch)\[\e[0;36m\] $ \[\e[0m\]"
+  export PS1="\[\e[01;32m\]\u\[\e[0;33m\]@\[\e[01;32m\]\h\[\e[0m\]:\[\e[36m\]\w\[\e[01;32m\]\$(parse_git_branch)\[\e[0;36m\] $ \[\e[0m\]"
 fi

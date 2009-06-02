@@ -1,12 +1,12 @@
 [user]
-	name = Edson César
-	email = edsono@gmail.com
+	name = Luis Braga
+	email = tchebraga@gmail.com
 [color]
 	status = auto
 	diff = auto
 	branch = auto
 [core]
-	excludesfile = /Users/edson/.gitignore
+	excludesfile = /Users/luisbraga/.gitignore
 	editor = mate -w
 [alias]
 	st = status
