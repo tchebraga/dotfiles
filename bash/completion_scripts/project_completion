@@ -16,7 +16,9 @@ class ProjectCompletion
   end
   
   def projects
-    `ls ~/code/`.split
+    code = `ls ~/code/`.split
+    code.delete('vendor')
+    `ls ~/code/vendor`.split + code
   end
 end
 
